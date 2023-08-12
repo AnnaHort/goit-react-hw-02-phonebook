@@ -27,7 +27,7 @@ export const QuizForm = ({ onAdd }) => {
   return (
     <Formik
       initialValues={{
-        contacts: [],
+        contacts: '',
         name: '',
       }}
       validationSchema={Schema}
