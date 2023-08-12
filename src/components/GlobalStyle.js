@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
 import 'modern-normalize';
 
 export const GlobalStyle = createGlobalStyle`
@@ -29,3 +30,7 @@ button {
 }
 
 `;
+
+export const SectionContainer = styled.div`
+margin-left: 20px;
+`

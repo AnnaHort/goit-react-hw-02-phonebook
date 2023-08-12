@@ -1,6 +1,8 @@
+import { StyledSearchInput } from "./Filter.styled"
+
 export const Filter = ({filterValue,onChangeFilter}) => {
     return (
-    <input
+    <StyledSearchInput
     type="text"
     name="filter"
     value={filterValue}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { QuizForm } from './QuizForm/QuizForm';
-import { GlobalStyle } from './GlobalStyle';
+import { GlobalStyle, SectionContainer } from './GlobalStyle';
 import { Filter } from './Filter/Filter';
 import { ContactList } from './ContactList/ContactList';
 
@@ -58,7 +58,7 @@ export class App extends Component {
     );
 
     return (
-      <div>
+      <SectionContainer>
         <GlobalStyle />
         <h1>Phonebook</h1>
         <QuizForm onAdd={this.addContact} />
@@ -68,7 +68,7 @@ export class App extends Component {
           onChangeFilter={this.changeFilter}
         />
         <ContactList contact={visibleContacts} deleteContact ={this.handleDelete}/>
-      </div>
+      </SectionContainer>
     );
   }
 }

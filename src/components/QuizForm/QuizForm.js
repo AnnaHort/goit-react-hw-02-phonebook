@@ -40,7 +40,6 @@ export const QuizForm = ({ onAdd }) => {
         <Container>
           <label>Name</label>
           <InputEl
-            //   треба підключити айді
             name="name"
             type="text"
             pattern="^[a-zA-Zа-яА-Я]+(([' \-][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
