@@ -5,11 +5,16 @@ import { Filter } from './Filter/Filter';
 
 export class App extends Component {
   state = {
-    contacts: [],
+    contacts: [
+      {id: 'id-1', name: 'Rosie Simpson', contacts: '459-12-56'},
+      {id: 'id-2', name: 'Hermione Kline', contacts: '443-89-12'},
+      {id: 'id-3', name: 'Eden Clements', contacts: '645-17-79'},
+      {id: 'id-4', name: 'Annie Copeland', contacts: '227-91-26'},
+    ],
     filter: '',
     name: '',
-    number: '',
-  };
+    number: ''
+  }
 
   changeFilter = newFilter => {
     this.setState({
