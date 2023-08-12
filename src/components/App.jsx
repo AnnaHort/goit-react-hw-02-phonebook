@@ -42,6 +42,16 @@ export class App extends Component {
     );
   };
 
+  handleDelete = (contactId) => {
+    this.setState(prevState => {
+      return {
+        contacts: prevState.contacts.filter(
+          contact => contact.id !== contactId 
+        ),
+      };
+    });
+  }
+
   render() {
     const visibleContacts = this.state.contacts.filter(contact =>
       contact.name.toLowerCase().includes(this.state.filter.toLowerCase())
@@ -57,7 +67,7 @@ export class App extends Component {
           filterValue={this.state.filter}
           onChangeFilter={this.changeFilter}
         />
-        <ContactList contact={visibleContacts} />
+        <ContactList contact={visibleContacts} deleteContact ={this.handleDelete}/>
       </div>
     );
   }
